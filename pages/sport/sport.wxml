@@ -1,0 +1,30 @@
+<!--pages/sport/sport.wxml-->
+<view class="wrapper">
+  <view class="input-wrapper">
+    <form bindsubmit='formsubmit'>
+      <image class="search-icon" src="/image/search.png"></image>
+      <input placeholder="请输入运动名称" placeholder-class="input-placeholder" name="foodnamevalue" focus="true" />
+    </form>
+  </view>
+</view>
+<text class="banner-text">常记录运动</text>
+<view class="sport" wx:for="{{sport_list}}" wx:key="">
+  <view class="sport-message" data-select="{{item.sportname}}" data-testId="{{item.sportimg}}" bindtap="modalinput">
+    <image class="sport-image" src="{{item.sportimg}}"></image>
+    <view class="food-massage-text">
+      <view>
+        <text class="sportd-title">{{item.sportname}}</text>
+      </view>
+      <view>
+        <text class="sport-number">{{item.calorie}}</text>
+        <text>千卡/60分钟</text>
+      </view>
+    </view>
+  </view>
+  <modal hidden="{{hiddenmodalput}}" title="今天又坚持运动了！" confirm-text="坚持！" cancel-text="手滑！" bindcancel="cancel" bindconfirm="confirm">
+    <form>
+      <view>{{sname}}</view>
+      <input placeholder="请输入运动时间（分钟）" type="digit" name="stime" bindblur="stimeInput" focus="true" />
+    </form>
+  </modal>
+</view>

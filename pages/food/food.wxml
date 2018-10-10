@@ -1,0 +1,30 @@
+<!--pages/food/food.wxml-->
+<view class="wrapper">
+  <view class="input-wrapper">
+    <form bindsubmit='formsubmit'>
+      <image class="search-icon" src="/image/search.png"></image>
+      <input placeholder="请输入食物名称" placeholder-class="input-placeholder" name="foodnamevalue" focus="true" />
+    </form>
+  </view>
+</view>
+<text class="banner-text">常记录食物</text>
+<view class="food" wx:for="{{food_list}}" wx:key="">
+  <view class="food-message" data-select="{{item.foodname}}" data-testId="{{item.foodimg}}" bindtap="modalinput">
+    <image class="food-image" src="{{item.foodimg}}"></image>
+    <view class="food-massage-text">
+      <view>
+        <text class="food-title">{{item.foodname}}</text>
+      </view>
+      <view>
+        <text class="food-number">{{item.calorie}}</text>
+        <text>千卡/100克</text>
+      </view>
+    </view>
+  </view>
+  <modal hidden="{{hiddenmodalput}}" title="今天吃了什么？" confirm-text="没忍住" cancel-text="忍住了" bindcancel="cancel" bindconfirm="confirm">
+    <form>
+      <view>{{fname}}</view>
+      <input placeholder="请输入食物质量（克）" type="digit" name="fweight" bindblur="fweightInput" focus="true" />
+    </form>
+  </modal>
+</view>

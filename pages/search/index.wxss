@@ -1,0 +1,94 @@
+.section{
+  width: 94%;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.section .search-icon{
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+
+}
+.section .search-icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.main{
+  width: 94%;
+  margin: 50rpx auto;
+  height: 600rpx;
+  color: #a9a;
+}
+
+.title{
+ width: 100%;
+ height: 40rpx;
+ position: relative;
+}
+.title .left{
+  float: left;
+  width:20%;
+  height: 40rpx;
+  position: relative;
+}
+.title .text{
+  float: left;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  width: 400rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.title .right{
+  width: 20%;
+  height: 40rpx;
+  float: left;
+  position: relative;
+
+}
+.left::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+  height: 1rpx;
+  right: 0;
+  background-color: #a9a;
+}
+.right::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+  height: 1rpx;
+  right: 0;
+  background-color: #a9a;
+}
+.content{
+  margin-top: 50rpx;
+  height: 200rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.first{
+  display: flex;
+  width: 94%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+}
+.first .list{
+ flex: 1;
+}
+.second{
+  display: flex;
+  width: 94%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+}
+.second .list{
+ flex: 1;
+}

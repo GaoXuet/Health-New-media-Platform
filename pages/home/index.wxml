@@ -1,0 +1,28 @@
+<view class="container">
+<swiper  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="section section_gap">
+  <view class="section__title">精选文章</view>
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view class="scroll-view-item_H" wx:for="{{hotList}}" wx:key="{{item}}" data-pic="{{item.pic}}"
+    data-title="{{item.title}}" data-avatar="{{item.avatar}}"
+    data-name="{{item.name}}" data-experience="{{item.experience}}" bindtap="article">
+      <image src="{{item.pic}}"class="scroll-image"/>
+      <view class="content">
+      <view  class="title" >{{item.title}}</view>
+      <view class="scroll-view-item-cf">
+        <view class="camerist_avatar"><image src="{{item.avatar}}"></image></view>
+        <view class="camerist_name">{{item.name}}</view>
+      </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="more" bindtap="more">更多<image src="../../image/more.png"></image></view>
+</view>

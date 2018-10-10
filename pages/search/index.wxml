@@ -1,0 +1,42 @@
+<view class="section">
+  <view class="search-icon">
+    <image src="../../image/search.png" />
+  </view>
+    <input class="input" placeholder-style="font-size:15px"
+    placeholder="请在此输入你想要查找的文章/动态等" auto-focus/>
+</view>
+<view class="main">
+
+  <view class="title">
+    <view class="left"></view>
+    <view class="text">最近两个小时有人在搜</view>
+  <view class="right"></view>
+  </view>
+  <view class="content">
+    <view class="first">
+    <view class="list">
+      健身
+    </view>
+    <view class="list">
+      食谱
+    </view>
+    <view class="list">
+      饮食
+    </view>
+    </view>
+    <view class="second">
+      <view class="list">
+        体质
+      </view>
+      <view class="list">
+        体脂
+      </view>
+  
+      <view class="list">
+        高血压
+      </view>
+    </view>
+
+
+  </view>
+</view>

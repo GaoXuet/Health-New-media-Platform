@@ -1,0 +1,116 @@
+.black{
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+background-color: #F0F0F0;
+}
+.container{
+ width: 95%;
+ height: 800rpx;
+ overflow-y:hidden;
+ margin: 50rpx auto;
+ overflow-x: hidden;
+ background-color: white;
+}
+.scroll-image{
+  width: 100%;
+}
+.content{
+  background-color: #fff;
+  height: 380rpx;
+  width: 100%;
+  text-align: center;
+}
+.title{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  color: #000;
+
+}
+.scroll-view-item-AT{
+  width: 100%;
+  font-size: 36rpx;
+  color: #c9c;
+}
+.area{
+  display: inline-block;
+}
+.day{
+  margin-left: 10rpx;
+  display: inline-block;
+}
+.fee{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.scroll-view-item-cf{
+  width: 100%;
+  height: 150rpx;
+  position:relative;
+}
+.scroll-view-item-cf::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10rpx;
+  right: 10rpx;
+  height: 1rpx;
+  background-color: #E0E0E0;
+
+}
+.camerist_avatar{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+}
+.camerist_avatar image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.camerist{
+  margin-top: 20rpx;
+  float: left;
+  width: 200rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+.camerist_name{
+  font-size: 40rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  color: #7B7B7B;
+}
+.experience{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-size: 30rpx;
+  float: left;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1px solid  #E0E0E0;
+  color: #7B7B7B;
+}
+.reserve{
+ float: right;
+ margin-top: 40rpx;
+ margin-right: 20rpx;
+ font-size: 40rpx;
+ width: 250rpx;
+ height: 80rpx;
+ line-height: 80rpx;
+ border-radius: 10rpx;
+ background-color:#FF9797;
+ color: white;
+
+}

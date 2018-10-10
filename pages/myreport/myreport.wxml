@@ -1,0 +1,148 @@
+<view class="container">
+    <view class="top">
+      <view  bindtap="bindViewTap" class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+
+    <text class="headtext">我的身体怎么样？</text>
+    <view class="line1">  
+        <view style="width:23%;height:1px;background-color:white"></view>  
+        <view style="width:54%;height:1px;background-color: 	#FA8072"></view>
+        <view style="width:23%;height:1px;background-color:white"></view>  
+    </view>
+   <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>
+        <view style="width:2%;height:20px;background-color:#1E90FF"></view>
+        <view style="width:2%;height:20px;background-color:white"></view>
+        <view style="width:18%;text-align:left"><text style="font-size:14px">BMI</text></view>  
+        <view style="width:52%"><text>19.6（健康）</text></view>
+        <view style="width:20%" bindtap="openAlert1"><image style="width:25px;height:25px" src="../../image/wenhao.png"/></view>  
+    </view>
+    <view class="fenlan">
+    <view style="width:10%;height:20px;background-color:white"></view>
+    <Text class="percent" style="width:18%">偏轻</Text>
+    <Text class="percent" style="width:18%">健康</Text>
+    <Text class="percent" style="width:18%">超重</Text>
+    <Text class="percent" style="width:18%">肥胖</Text>
+    <view style="width:10%;height:20px;background-color:white"></view>
+    </view>
+    <View class="fenlan" style="margin-top:5px">
+        <view style="width:10%;height:20px;background-color:white"></view>
+        <progress  style="width:80%;font-size:13px;" color="#1E90FF" percent="19.6" stroke-width="5" show-info active ></progress>
+        <view style="width:10%;height:20px;background-color:white"></view>
+    </View>
+
+
+   <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>
+        <view style="width:2%;height:20px;background-color:#EE7621"></view>
+        <view style="width:2%;height:20px;background-color:white"></view>
+        <view style="width:18%;text-align:left"><text style="font-size:14px">体脂率</text></view>  
+        <view style="width:52%"><text>22.7（偏瘦）</text></view>
+        <view style="width:20%" bindtap="openAlert2"><image style="width:25px;height:25px" src="../../image/wenhao.png"/></view>  
+    </view>
+    <view class="fenlan">
+    <view style="width:10%;height:20px;background-color:white"></view>
+    <Text class="percent" style="width:18%">瘦</Text>
+    <Text class="percent" style="width:18%">偏瘦</Text>
+    <Text class="percent" style="width:18%">标准</Text>
+    <Text class="percent" style="width:18%">微胖</Text>
+    <Text class="percent" style="width:18%">肥胖</Text>
+    <view style="width:10%;height:20px;background-color:white"></view>
+    </view>
+    <View class="fenlan" style="margin-top:5px">
+        <view style="width:10%;height:20px;background-color:white"></view>
+        <progress  style="width:80%;font-size:13px" color="#EE7621" percent="22.7" stroke-width="5" show-info active ></progress>
+        <view style="width:10%;height:20px;background-color:white"></view>
+    </View>
+    <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>  
+        <view style="width:90%;height:20px;background-color:white">
+        <image style="margin-top:15px;width:20px;height:20px" src="../../image/light_orange.png"/>
+        <text style="font-size:15px;text-shadow:6rpx 6rpx 6rpx  #ADADAD ">综合BMI和体脂率，你的身材属于紧致型</text>
+        </view>
+        <view style="width:5%;height:20px;background-color:white"></view>  
+    </view>
+    <view class="fenlan" style="margin-top:40px;margin-bottom:10px;">  
+        <view style="width:50%;height:20px;background-color:white">
+        <text style="font-size:12px;color:#8F8F8F">最佳体重
+        <text style="font-size:12px;">50公斤</text>
+        </text>
+        </view>
+        <view style="width:50%;height:20px;background-color:white">
+        <text style="font-size:12px;color:#8F8F8F;">健康体重范围
+        <text style="font-size:12px;">49.2~63.8公斤</text>
+        </text>
+        </view>
+    </view>
+    <view style="margin-top:20px;height:1px;background-color:#EAEAEA"></view>
+    <view class="notice1" >
+    <text  style="margin-top:10px;letter-spacing:0.2em;color:#8F8F8F;text-align:center;height:30%">注：不适用于运动员和孕妇。</text>
+    </view>
+     <view style="margin-top:10px;height:3px;background-color:#EAEAEA"></view>
+
+
+
+    <text class="headtext">我该怎么吃？</text>
+    <view class="line2">  
+        <view style="width:30%;height:1px;background-color:white"></view>  
+        <view style="width:40%;height:1px;background-color: 	#FA8072"></view>
+        <view style="width:30%;height:1px;background-color:white"></view>  
+    </view> 
+    <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>
+        <view style="width:2%;height:20px;background-color:#7CCD7C"></view>
+        <view style="width:2%;height:20px;background-color:white"></view>
+        <view style="width:18%;text-align:left"><text style="font-size:14px" >预算热量</text></view>  
+        <view style="width:52%"><text style="font-size:20px">1330千卡</text></view>
+    </view>
+    <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>  
+        <view style="width:90%;height:20px;background-color:white">
+        <image style="margin-top:15px;width:20px;height:20px" src="../../image/light_green.png"/>
+        <text style="font-size:15px;text-shadow:6rpx 6rpx 6rpx  #ADADAD;">预算热量是根据你的身体情况所计算的每天应该摄入的热量。</text>
+        <view style="margin-top:20px">
+        <text style="font-size:12px;color:#8F8F8F;">不用过于精确，在1215~1485千卡的范围内都是合理的。</text></view>
+        </view>
+        <view style="width:5%;height:20px;background-color:white"></view>  
+    </view>
+    <view style="margin-top:100px;height:3px;background-color:#EAEAEA"></view>
+
+
+
+    <text class="headtext">我该怎么运动？</text>
+    <view class="line3">  
+        <view style="width:25%;height:1px;background-color:white"></view>  
+        <view style="width:50%;height:1px;background-color: 	#FA8072"></view>
+        <view style="width:25%;height:1px;background-color:white"></view>  
+    </view> 
+    <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>
+        <view style="width:2%;height:20px;background-color: 	#FF0000"></view>
+        <view style="width:2%;height:20px;background-color:white"></view>
+        <view style="width:18%;text-align:left"><text style="font-size:14px" >燃脂心率</text></view>  
+        <view style="width:52%"><text style="font-size:20px">120~160分钟</text></view>
+    </view>
+    <view class="fenlan">  
+        <view style="width:5%;height:20px;background-color:white"></view>  
+        <view style="width:90%;height:20px;background-color:white">
+        <image style="margin-top:15px;width:20px;height:20px" src="../../image/light_red.png"/>
+        <text style="font-size:15px;text-shadow:6rpx 6rpx 6rpx  #ADADAD;">运动时心率在这个范围内，燃烧脂肪的效率最高。</text>
+        <view style="width:5%;height:20px;background-color:white"></view>  
+        </view>
+    </view>
+    <view class="notice" style="margin-top:50px" >
+        <text  style="letter-spacing:0.2em;color:#8F8F8F">以上数据是根据你的身体数据和设定的目标来计算的，如果有较大变化，请重新测评。</text>
+    </view>
+    <view  style="display: flex; flex-direction: row; text-align:center;background-color:#EAEAEA">  
+        <view style="width:10%;height:30px;"></view>  
+        <view style="width:80%;height:30px;">
+        <view class="testagain" bindtap="testagain" style="font-size:18px;">
+            <text  >重新测评</text>
+        </view>
+        <view style="width:10%;height:30px;"></view> 
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="container">
+  <image class="scroll-image" src="{{pic}}"></image>
+  <view class="content">
+  <view  class="title" >{{title}}</view>
+  <view>食堂的菜一般容易做得比较咸，所以还应特别注意养成清淡的膳食习惯。流行病学调查表明，钠的摄入量与高血压的发病率呈正比。世界卫生组织建议每人每日食盐用量不超过6克为宜。所以不要吃得太咸，咸菜、酱豆腐、咸鱼、腌肉等都要少吃。为控制脂肪的摄入量，可多选择蒸、煮、烩、炖、熬、焖等烹饪方式制作的菜肴，少吃煎、炸、炒的食品。如：多吃拌茄泥，少吃烧茄子;鱼应多吃清蒸的，少吃红烧的;应选汆丸子，少吃炸丸子。另外，上班族工作忙时偶尔光顾洋快餐无可非议，但不能经常吃。因为洋快餐以烤、炸为主，营养成分不齐全，属于高脂肪、高蛋白、高热量的三高食品。经常吃洋快餐，能量摄入过高，容易肥胖，危害健康。</view>
+  <swiper  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+  <view class="scroll-view-item-cf">
+    <view class="camerist_avatar"><image src="{{avatar}}"></image></view>
+    <view class="camerist">
+    <view class="camerist_name">{{name}}</view>
+    <view class="experience">{{experience}}</view>
+    </view>
+    <view class="btn">
+      <view bindtap="onChangeShowState">收藏</view>
+    </view>
+  </view>
+  <view class="reserve" bindtap=""><view class="text">点赞</view></view>
+  </view>
+</view>

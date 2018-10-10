@@ -1,0 +1,23 @@
+
+.apply_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.apply_name {
+  font-size: 28rpx;
+  letter-spacing: -0.6rpx;
+}
+
+.help_apply, .apply_time  {
+  font-size: 24rpx;
+  letter-spacing: -0.6rpx;
+  color: rgb(142, 142, 142);
+}
+
+.help_apply {
+  margin-left: 20rpx;
+}

@@ -1,0 +1,47 @@
+<view class="container">
+  <text class="headtext">还可以摄入</text>
+  <view class="page-body">
+    <view class="buttonzu">
+      <view class="item1"></view>
+      <view class="button" bindtap='goToFood'>
+        <text>饮食+</text>
+      </view>
+      <view class="button" bindtap='goToSport'>
+        <text>运动+</text>
+      </view>
+      <view class="item1"></view>
+    </view>
+    <view class="item2"></view>
+    <view class="day-text">
+      <text>饮食</text>
+    </view>
+    <view class="food-message" wx:for="{{food_list}}" wx:key="">
+      <image class="food-image" src="{{item.foodimage}}"></image>
+      <view class="food-message-text">
+        <view>
+          <text class="food-title">{{item.foodname}}</text>
+        </view>
+        <view>
+          <text style='font-size:11px;color:#828282'>{{item.foodweight}}克</text>   
+          <text style='font-size:11px;color:#828282'>/{{item.foodcalorie}}千卡</text>
+        </view>
+      </view>
+    </view>
+    <view class="item2"></view>
+   <view class="day-text">
+      <text>运动</text>
+    </view>
+    <view class="food-message" wx:for="{{sport_list}}" wx:key="">
+      <image class="food-image" src="{{item.sportimage}}"></image>
+      <view class="food-message-text">
+        <view>
+          <text class="food-title">{{item.sportname}}</text>
+        </view>
+        <view>
+          <text style='font-size:11px;color:#828282'>{{item.runtime}}分钟</text>   
+          <text style='font-size:11px;color:#828282' position:fixed left>/{{item.sportcalorie}}千卡</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

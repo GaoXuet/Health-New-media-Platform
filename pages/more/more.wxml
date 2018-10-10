@@ -1,0 +1,23 @@
+<view class="black">
+<view class="container" wx:for="{{hotList}}" wx:key="{{itme}}">
+  <image src="{{item.pic}}"class="scroll-image"/>
+  <view class="content">
+  <view  class="title" >{{item.title}}</view>
+  <view class="scroll-view-item-AT">
+    <view class="area">{{item.area}}</view>
+    <view class="day">{{item.day}}</view>
+  </view>
+  <view class="fee">{{item.fee}}</view>
+  <view class="scroll-view-item-cf">
+    <view class="camerist_avatar"><image src="{{item.avatar}}"></image></view>
+    <view class="camerist">
+    <view class="camerist_name">{{item.name}}</view>
+    <view class="experience">{{item.experience}}</view>
+    </view>
+    <view class="reserve" data-pic="{{item.pic}}"
+    data-title="{{item.title}}"  data-avatar="{{item.avatar}}"
+    data-name="{{item.name}}"   data-experience="{{item.experience}}" bindtap="article">全文</view>
+  </view>
+  </view>
+</view>
+</view>

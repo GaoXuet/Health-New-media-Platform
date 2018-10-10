@@ -1,0 +1,9 @@
+<!--报名item模版-->
+<template name="applyed">
+  <view class="apply_item paddingLR">
+    <view>
+      <text class="apply_name">{{item.joinusername}}</text>
+    </view>
+    <text class="apply_time">{{item.jointime}}</text>
+  </view>
+</template>

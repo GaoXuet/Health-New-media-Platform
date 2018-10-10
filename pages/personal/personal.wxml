@@ -1,0 +1,46 @@
+<!--编辑个人信息-->
+<view class="container">
+<view class="avatar">
+  <text>头像</text>
+  <view class="real">
+    <image class="n" bindtap="chooseimage" src="../../image/avatar_next.png"></image>
+    <image class="a" src="{{userInfoAvatar}}"/>
+  </view>
+</view>
+<view class="nickName">
+  <text>名字</text>
+  <view class="real">{{nickName}}</view>
+</view>
+<view class="sex">
+  <text>性别</text>
+  <view class="real">
+   <radio-group class="radio-group" bindchange="radioChange">
+     <label class="radio" wx:for="{{items}}">
+       <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+     </label>
+   </radio-group>
+  </view>
+</view>
+<view class="area">
+  <text>地址</text>
+  <view class="real">{{province}}省{{city}}市</view>
+</view>
+<view class="height">
+  <text>身高</text>
+  <picker value="{{height1}}" range="{{heightRange}}" bindchange="heightPickerBindchange">  
+     <view class="real">{{heightRange[height1]}}厘米</view>
+</picker>  
+</view>
+<view class="weight">
+  <text>体重</text>
+  <picker value="{{weight1}}" range="{{weightRange}}" bindchange="weightPickerBindchange">  
+     <view class="real">{{weightRange[weight1]}}公斤</view>
+</picker>  
+</view>
+<view class="weight">
+  <text>生日</text>
+  <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange">  
+     <view class="real">{{dateValue}} 选择</view> 
+</picker>
+</view>
+</view>

@@ -1,0 +1,236 @@
+<!--template/toasts/toasts.wxml-->
+
+<!--显示弹框，要把div的css设置为opacity:1;pointer-events:auto;-->
+
+<!--报名成功或报名审核弹框-->
+<template name="apply">
+  <view class="apply-succeed" wx:if="{{dialogInfo.applySucceed}}" style="opacity:1;pointer-events:auto;">
+    <view class="apply-succeed-toast">
+      <image wx:if="{{dialogInfo.check==0}}" class="apply-succeed-image" src="https://cdn.51julebu.com/xiaochengxu/image/报名成功@2x.png"></image>
+      <image wx:if="{{dialogInfo.check==1}}" class="apply-succeed-image" src="https://cdn.51julebu.com/xiaochengxu/image/报名待审核@2x.png"></image>
+      <view wx:if="{{dialogInfo.check==0}}" class="apply-succeed-content">报名成功</view>
+      <view wx:if="{{dialogInfo.check==1}}" class="apply-succeed-content">你的报名信息已提交主办方审核</view>
+      <button class="apply-succeed-btn" bindtap="hideToasts">确定</button>
+    </view>
+  </view>
+</template>
+
+<!--拍照上传弹框-->
+<template name="check">
+  <view class="check-succeed" wx:if="{{applySucceed}}" style="opacity:1;pointer-events:auto;">
+    <view class="check-succeed-toast">
+      <image class="check-succeed-icon" mode="widthFix" src="https://cdn.51julebu.com/xiaochengxu/image/x@2x.png" bindtap="closeCheck"></image>
+      <view class="check-succeed-title">示例</view>
+      <view class="check-succeed-content">请上传清晰的手持身份证合照</view>
+      <image class="check-succeed-img" mode="widthFix" src="https://cdn.51julebu.com/xiaochengxu/image/sfrzzp@2x.png"></image>
+      <view style="position:relative">
+        <view class="check-succeed-btn" bindtap="toast_btn_upload">上传</view>
+        <view class="check-succeed-line"></view>
+        <view class="check-succeed-btn" bindtap="toast_btn_camera">拍照</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--俱乐部二维码弹框-->
+<template name="clubCode">
+  <view class="code-succeed" wx:if="{{club.codeHehe}}" style="opacity:1;pointer-events:auto;">
+    <view class="code-succeed-toast">
+      <image src="https://cdn.51julebu.com/xiaochengxu/image/close1@2x.png" class="code-close" bindtap="closeCode"></image>
+      <view class="code-club-content">
+        <view class="code-club-theme">邀请好友加入俱乐部</view>
+        <view class="text-center text-space">方式一：点击右上角【...】－【分享】发送给好友，点击即可查看俱乐部主页</view>
+        <view class="code-club-tip text-center">或</view>
+        <view class="text-space">方式二：分享下方二维码</view>
+        <view class="text-space">用微信扫一扫即可查看俱乐部主页</view>
+      </view>
+      <view>
+        <image mode="widthFix" class="code-message-img" src="{{club.clubcode}}"></image>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--活动二维码弹框-->
+<template name="activity-Code">
+  <view class="code-succeed" wx:if="{{activityCode}}" style="opacity:1;pointer-events:auto;">
+    <view class="code-succeed-toast code-club-position">
+      <image src="https://cdn.51julebu.com/xiaochengxu/image/close1@2x.png" class="code-close" bindtap="closeCode"></image>
+      <view class="activity-code-txt">分享活动二维码,用微信扫一扫即可参加活动</view>
+      <image mode="widthFix" class="activity-code-img" src="{{activity.qrcode}}"></image>
+      <view class="activity-code-title">{{activity.title}}</view>
+    </view>
+  </view>
+</template>
+
+<!--focus为true时输入键盘激活，默认为false-->
+<template name="sendNum">
+  <view class="modal" wx:if="{{authDialog.modalShowStyle}}" style="opacity:1;pointer-events:auto;">
+    <view class="dialog">
+      <view class="modol-text">
+        已向你的手机{{authDialog.phone}}发送4位验证码，请输入
+      </view>
+      <view class="modal-box">
+        <input class="model-input" maxlength="4" type="number" focus="{{authDialog.focus}}" bindinput="authInput" value="{{authDialog.diaryTitle}}" placeholder="输入验证码" placeholder-style="font-size:28rpx;letter-spacing:1rpx;" />
+        <view wx:if="{{authDialog.status==0}}" class="modal-time" style="color:#3dd1a5" bindtap="getAuthCode">发送验证码</view>
+        <view wx:if="{{authDialog.status==1}}" class="modal-time">重发{{countDown}}s</view>
+        <view wx:if="{{authDialog.sendstatus==1}}" class="modal-box-tip">注：下次报名将不再验证</view>
+      </view>
+      <view class="modal-button">
+        <view>
+          <button class="modal-btn modal-cancel" bindtap="touchCancel">取消</button>
+          <button class="modal-btn modal-canadd" bindtap="touchAddNew">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--手机号码弹框-->
+<template name="sendPhone">
+  <view class="phone" wx:if="{{phoneShowStyle}}" style="opacity:1;pointer-events:auto;">
+    <view class="phone-dialog">
+      <view class="phone-text">
+        请输入手机号码
+      </view>
+      <view class="phone-box">
+        <input class="phone-input" maxlength="11" type="number" focus="{{getFocus}}" bindinput="titleInput" value="{{phoneNum}}" placeholder="输入" placeholder-style="font-size:28rpx;letter-spacing:1rpx;"></input>
+      </view>
+      <view class="phone-button">
+        <view>
+          <button class="phone-btn phone-cancel" bindtap="touchCancel">取消</button>
+          <button class="phone-btn phone-canadd" bindtap="touchAddNew">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--申请加入-->
+<template name="joinCheck">
+  <view class="phone" wx:if="{{joinShowStyle}}" style="opacity:1;pointer-events:auto;">
+    <view class="phone-dialog">
+      <view class="phone-text">
+        {{join}}
+      </view>
+      <view class="phone-box">
+        <input class="phone-input" focus="{{getFocus}}" bindinput="titleInputJoin" value="{{needjoinText}}" placeholder="输入" placeholder-style="font-size:28rpx;letter-spacing:1rpx;"></input>
+      </view>
+      <view class="phone-button">
+        <view>
+          <button class="phone-btn phone-cancel" bindtap="touchCancelJoin">取消</button>
+          <button class="phone-btn phone-canadd" bindtap="touchAddNewJoin">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--发送到邮箱弹框-->
+<template name="sendEmail">
+  <view class="email" wx:if="{{emailShowStyle}}" style="opacity:1;pointer-events:auto;">
+    <view class="email-dialog">
+      <view class="email-text">
+        发送到邮箱
+      </view>
+      <view class="email-box">
+        <input class="email-input" focus="{{getFocus2}}" bindinput="titleInput" value="{{emailNum}}" placeholder="输入邮箱地址" placeholder-style="font-size:28rpx;letter-spacing:1rpx;"></input>
+      </view>
+      <view class="email-button">
+        <view>
+          <button class="email-btn email-cancel" bindtap="touchCancel">取消</button>
+          <button class="email-btn email-canadd" bindtap="touchAddNew">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--验证码弹框-->
+
+<!--focus为true时输入键盘激活，默认为false-->
+<template name="sendCheckCode">
+  <view class="modal" style="{{param.style}}" wx:if="{{!param.sendPhone}}">
+    <view class="dialog">
+      <view class="modol-text">
+        已向你的手机{{param.phone}}发送4位验证码，请输入
+      </view>
+      <view class="modal-box">
+        <input class="model-input" maxlength="4" type="number" focus="{{param.focus}}" bindinput="authInput" value="{{param.diaryTitle}}" placeholder="输入验证码" placeholder-style="font-size:28rpx;letter-spacing:1rpx;" />
+        <view wx:if="{{status==0}}" class="modal-time" style="color:#3dd1a5" bindtap="getAuthCode">发送验证码</view>
+        <view wx:if="{{status==1}}" class="modal-time">重发{{time}}s</view>
+        <view wx:if="{{param.sendstatus==1}}" class="modal-box-tip">注：下次报名将不再验证</view>
+      </view>
+      <view class="modal-button">
+        <view>
+          <button class="modal-btn modal-cancel" bindtap="touchCancel">取消</button>
+          <button class="modal-btn modal-canadd" bindtap="touchAddNew">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="phone" style="{{param.style}}" wx:else>
+    <view class="phone-dialog">
+      <view class="phone-text">
+        请输入手机号码
+      </view>
+      <view class="phone-box">
+        <input class="phone-input" maxlength="11" type="number" focus="{{param.focus}}" bindinput="titleInput" value="{{param.phoneNum}}" placeholder="输入" placeholder-style="font-size:28rpx;letter-spacing:1rpx;"></input>
+      </view>
+      <view class="phone-button">
+        <view>
+          <button class="phone-btn phone-cancel" bindtap="touchCancelSendPhone">取消</button>
+          <button class="phone-btn phone-canadd" bindtap="touchAddNewSendPhone">确定</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--填写资料弹框-->
+<template name="fillInfo">
+  <view class="email" wx:if="{{emailShowStyle}}" style="opacity:1;pointer-events:auto;">
+    <view class="email-dialog">
+      <view class="email-text">
+        {{alertTitle}}
+      </view>
+      <view class="email-box">
+        <input maxlength="{{maxLength?maxLength:30}}" class="email-input" focus="{{getFocus2}}" bindinput="titleInput" value="{{emailNum}}" placeholder="{{placeHolder}}" placeholder-style="font-size:28rpx;letter-spacing:1rpx;"></input>
+      </view>
+      <view class="email-button">
+        <view class="email-hehe">
+          <button class="email-btn email-cancel" bindtap="touchCancel">取消</button>
+          <form bindsubmit="touchAddNew" report-submit="true">
+            <button class="email-btn email-canadd" form-type="submit">
+              确定
+            </button>
+          </form>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="showToast">
+  <view class="show-tips" style="{{tipHidden}}">
+    <text> {{showTipTxt}} </text>
+  </view>
+</template>
+
+<!--报名审核是否通过弹框-->
+<template name="applyCheck">
+  <view class="phone" wx:if="{{applyCheckStyle}}" style="opacity:1;pointer-events:auto;">
+    <view class="phone-dialog">
+      <view class="phone-text">
+        {{applyTitle}}
+      </view>
+      <view class="phone-button">
+        <form bindsubmit="tapSure" report-submit="true">
+          <view>
+            <button class="phone-btn phone-cancel" bindtap="tapCancel">取消</button>
+            <button class="phone-btn phone-canadd" formType="submit" bindtap="tapSure">确定</button>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+</template>

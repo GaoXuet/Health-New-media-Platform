@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/diary/diary",
+    "pages/home/index",
+    "pages/food/food",
+    "pages/myreport/myreport",
+    "pages/more/more",
+    "pages/search/index",
+    "pages/my/index",
+    "pages/personal/personal",
+    "pages/logs/logs",
+    "pages/addfamilymember/addfamilymember",
+    "pages/healthtest/healthtest",
+    "pages/article/article",
+    "pages/sport/sport",
+    "pages/setting/setting",
+    "pages/tomato/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#5ac6ee",
+    "navigationBarTitleText": "见康来",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#5ac6ee",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/tomato/index",
+        "iconPath": "/image/clock.png",
+        "selectedIconPath": "/image/selectclock.png",
+        "text": "番茄管理"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/selecthome.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/diary/diary",
+        "iconPath": "/image/daily.png",
+        "selectedIconPath": "/image/selectdaily.png",
+        "text": "日记"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "/image/my.png",
+        "selectedIconPath": "/image/selectmy.png",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "iconPath": "/image/search.png",
+        "selectedIconPath": "/image/selectsearch.png",
+        "text": "搜索"
+      }
+    ]
+  }
+}

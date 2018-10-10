@@ -1,0 +1,93 @@
+
+.page-body {
+  align-items: center;
+}
+
+.buttonzu {
+  display: flex;
+  flex-direction: row;
+}
+
+.headtext {
+  text-align: center;
+  font-size: 13px;
+  font-weight: lighter;
+  margin-top: 20rpx;
+}
+
+.button {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  border: 0;
+  background-color: #ebe6e6;
+  font-size: 13px;
+  text-align: center;
+  font-weight: lighter;
+  width: 6rem;
+  height: 2rem;
+  line-height: 85rpx;
+}
+
+.item1 {
+  width: 22%;
+  height: 3rem;
+}
+
+.item2 {
+  width: 100%;
+  height: 7px;
+  background-color: #ebe6e6;
+}
+
+.day-text {
+  font-size: 13px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 35px;
+   display: flex;
+  flex-direction: row;
+}
+
+.item3 {
+  width: 70%;
+  height: 3rem;
+}
+.day-number{
+  color: #828282;
+  text-align: right;
+}
+
+.food {
+  margin-left: 6px;
+}
+
+.food-message {
+  display: flex;
+  flex-direction: row;
+}
+
+.food-message-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-title {
+  font-size: 16px;
+}
+
+.food-number{
+  color: #EE5C42;
+  margin-right: 4px;
+}
+
+.food-image {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-left: 6px;
+  margin-right: 12px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}

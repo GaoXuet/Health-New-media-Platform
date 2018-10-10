@@ -1,0 +1,86 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.userinfo {
+  padding-top:20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #fff;
+}
+.top{
+  width: 100%;
+  height: 300rpx;
+  background:#5ac6ee;
+}
+
+.headtext {
+  text-align: center;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom:20px;
+  color:gray;
+}
+.line1{  
+  display: flex;  
+  flex-direction: row;  
+}  
+.fenlan{
+  margin-top:20px;
+  display: flex;  
+  flex-direction: row; 
+  text-align:center;
+}
+.percent{
+  margin-top:20px;
+  text-align:center;
+  font-size:12px;
+  color:#ADADAD;
+}
+.line2{  
+  display: flex;  
+  flex-direction: row;  
+}  
+.line3{  
+  display: flex;  
+  flex-direction: row;  
+}  
+.notice{
+  height:60px;
+  background-color:#EAEAEA;
+  font-size:14px;
+  display: flex;
+  justify-content: center;
+}
+.notice1{
+  height:30px;
+  background-color:white;
+  font-size:14px;
+  display: flex;
+  justify-content: center;
+}
+.testagain{
+ float: right;
+ width: 100%;
+ height: 50rpx;
+ background-color:#5ac6ee;
+ color: white;
+ justify-content: center;
+}

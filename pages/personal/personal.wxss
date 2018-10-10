@@ -1,0 +1,132 @@
+.container{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+.avatar{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.avatar::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #9D9D9D;
+}
+
+.nickName{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  vertical-align: middle;
+  position:relative;
+}
+.nickName::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #9D9D9D;
+}
+.sex{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.sex::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #9D9D9D;
+}
+.area{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  position: relative;
+}
+.area::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #9D9D9D;
+}
+.container text{
+  float: left;
+  color: #7B7B7B;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+.container .real{
+  float: right;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.a{
+  float: right;
+  width: 100rpx;
+  height: 100rpx;
+  margin-top:25rpx;
+  margin-right: 30rpx;
+  border-radius: 50%;
+}
+.n{
+  float: right;
+  width: 50rpx;
+  height: 100rpx;
+  margin-top: 25rpx;
+  vertical-align: middle;
+}
+.height{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  vertical-align: middle;
+  position:relative;
+}
+.height::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #9D9D9D;
+}
+.weight{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  vertical-align: middle;
+  position:relative;
+}
+.weight::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform: scaleY(.5);
+  background-color: #9D9D9D;
+}
